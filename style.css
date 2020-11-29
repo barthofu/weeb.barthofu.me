@@ -1,0 +1,94 @@
+body{
+    margin:0;
+    font:75% Arial,Helvetica,sans-serif;
+}
+
+#particles-js {
+
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 4rem;
+}
+
+h1 a {
+    color: #fa8a96 !important;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-left: 2.5vw;
+    transform: scale(0.8);
+}
+
+.buttons > a {
+    color: white;
+    font-weight: bolder;
+    font-size: 3rem;
+}
+
+#background {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -10;
+    filter: blur(5px);
+    overflow: hidden;
+    transform: scale(1.1);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.3)), url('https://im7.ezgif.com/tmp/ezgif-7-2cf2fc2bf032.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+.name {
+    transform: translatey(0px);
+    animation: float 5s ease-in-out infinite;
+}
+
+.flipInX {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+.flipInX .button {
+  -webkit-transition-duration: 1s;
+  transition-duration: 1s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+}
+.flipInX:hover .button, .flipInX:focus .button, .flipInX:active .button {
+  -webkit-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+
+a > img {
+    width: calc(3vw + 2vh);
+    margin-left: -0.5vw;
+}
+
+/* ==================== ANIMATIONS ======================*/
+
+@keyframes float {
+    0% {
+        transform:translatey(0px)
+    }
+    50% {
+        transform:translatey(-20px)
+    }
+    100% {
+        transform:translatey(0px)
+    }
+}
